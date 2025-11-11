@@ -22,23 +22,29 @@ class Solution(object):
         :rtype: int
         """
 
-        count = 0
+        max_Length = 0
+        subset = []
+        m_Count = 0
+        n_Count = 0
 
-        for binary in strs:
-            a = 0
-            b = 0
-            if len(binary) < (m + n):
-                for num in binary:
-                    if num == "0":
-                        a += 1
-                    else:
-                        b += 1
+        for item in strs:
+            if len(item) > max_Length:
+                max_Length = len(item)
 
-                if a <= m and b <= n:
-                    count += 1
+        strs.sort(key=len)
 
-        return count
-        
+        for i in range(1, max_Length + 1):
+            for j in strs:
+                if len(j) == i:
+                    zeros = j.count("0")
+                    ones = j.count("1")
+
+                    if m_Count + zeros <= m and n_Count + ones <= n:
+                        m_Count += zeros
+                        n_Count += ones
+                        subset.append(j)
+
+        return len(subset)
 
 
 ```
