@@ -18,13 +18,12 @@ class Solution(object):
         :rtype: List[int]
         """
 
-        for i in range(len(digits) - 1, -1, -1):  # iterate backwards
+        for i in range(len(digits) - 1, -1, -1): 
             if digits[i] < 9:
                 digits[i] += 1
                 return digits
-            digits[i] = 0  # if it's 9, set to 0 and carry over
+            digits[i] = 0 
 
-        # If we exit loop, it means all were 9 (e.g., 999 → 1000)
         return [1] + digits
 
 
