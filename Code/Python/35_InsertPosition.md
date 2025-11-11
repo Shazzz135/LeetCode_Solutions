@@ -1,4 +1,4 @@
-# LeetCode Problem #35 — Insertion Sort
+# LeetCode Problem #35 — Insertion Position
 
 ## Problem Description
 Given a sorted array of distinct integers and a target value, return the index if the target is found. If not, return the index where it would be if it were inserted in order.
@@ -24,10 +24,6 @@ class Solution(object):
         for i in range(0, len(nums)):
             if target <= nums[i]:
                 return i
-
-
-        
-
 
 ```
 ## Examples
