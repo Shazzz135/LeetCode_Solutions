@@ -1,4 +1,3 @@
-````markdown
 # LeetCode Problem #189 — Rotate Array
 
 ## Problem Description
@@ -47,4 +46,3 @@ Explanation:
 - rotate 1 steps to the right: [99,-1,-100,3]
 - rotate 2 steps to the right: [3,99,-1,-100]
 
-````
