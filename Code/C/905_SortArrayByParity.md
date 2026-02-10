@@ -1,24 +1,15 @@
-# 905. Sort Array By Parity
 
-## Problem
-Given an integer array `nums`, move all the even integers at the beginning of the array followed by all the odd integers.
+# LeetCode Problem #905 — Sort Array By Parity  
+
+## Problem Description
+Given an integer array nums, move all the even integers at the beginning of the array followed by all the odd integers.
 
 Return any array that satisfies this condition.
 
----
+ 
 
-### Example 1:
-- Input: nums = [3,1,2,4]
-- Output: [2,4,3,1]
-- Explanation: The outputs [4,2,3,1], [2,4,1,3], and [4,2,1,3] would also be accepted.
+## Solution (C)
 
-### Example 2:
-- Input: nums = [0]
-- Output: [0]
-
----
-
-## Solution
 ```c
 #include <stdlib.h>
 
@@ -39,16 +30,15 @@ int* sortArrayByParity(int* nums, int numsSize, int* returnSize) {
     return nums;
 }
 ```
+## Examples
 
----
+Example 1:
 
-## Complexity
-- Time: $O(n)$
-- Space: $O(1)$
+Input: nums = [3,1,2,4]
+Output: [2,4,3,1]
+Explanation: The outputs [4,2,3,1], [2,4,1,3], and [4,2,1,3] would also be accepted.
 
----
+Example 2:
 
-## Tags
-- Array
-- Two Pointers
-- Sorting
+Input: nums = [0]
+Output: [0]
